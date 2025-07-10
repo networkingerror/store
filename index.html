@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Commerce Home</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+</head>
+<body>
+
+    <!-- Top Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">ShopZen</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="products.html">Products</a></li>
+                </ul>
+                <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+                <ul class="navbar-nav ms-3">
+                    <li class="nav-item"><a class="nav-link" href="cart.html">Cart</a></li>
+                    <li class="nav-item"><a class="nav-link" href="login.html">Login</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="bg-light text-dark text-center p-5 mb-4" id="hero-slider">
+        <div class="container slide active">
+            <h1>Biggest Sale of the Year!</h1>
+            <p>Up to 50% off on all electronics.</p>
+            <a href="products.html" class="btn btn-primary">Shop Now</a>
+        </div>
+        <div class="container slide" style="display: none;">
+            <h1>New Arrivals: Summer Collection</h1>
+            <p>Fresh styles just for you.</p>
+            <a href="products.html" class="btn btn-primary">Explore</a>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container">
+        <section class="mb-5" id="categories-section">
+            <h2 class="text-center mb-4">Shop by Category</h2>
+            <div class="row text-center" id="category-container"></div>
+        </section>
+        <section>
+            <h2 class="text-center mb-4">Featured Products</h2>
+            <div class="row" id="product-container">
+                <!-- Products will be dynamically loaded here -->
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center p-4 mt-5">
+        <div class="container">
+            <p>© 2024 ShopZen. All Rights Reserved.</p>
+        </div>
+    </footer>
+    
+    <!-- Bottom Mobile Navigation Bar -->
+    <nav class="bottom-nav">
+        <a href="index.html" class="nav-item active"> <!-- Active on this page -->
+            <i class="fas fa-home"></i>
+            <span>Home</span>
+        </a>
+        <a href="#" class="nav-item">
+            <i class="fas fa-comment-dots"></i>
+            <!-- Message count is removed -->
+            <span>Messages</span>
+        </a>
+        <a href="cart.html" class="nav-item">
+            <i class="fas fa-shopping-cart"></i>
+            <span class="notification-badge" id="cart-badge-count">0</span>
+            <span>Cart</span>
+        </a>
+        <a href="login.html" class="nav-item">
+            <i class="fas fa-user"></i>
+            <span>Account</span>
+        </a>
+    </nav>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/bottom-nav.js"></script>
+</body>
+</html>

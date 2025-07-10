@@ -1,0 +1,86 @@
+/* Custom styles to complement Bootstrap */
+.card {
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+.card-img-top {
+    height: 200px;
+    object-fit: cover;
+}
+.category-icon {
+    font-size: 3rem;
+    color: #0d6efd;
+}
+#hero-slider .slide {
+    animation: fadeIn 1.5s;
+}
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* ========================================= */
+/* ====== Bottom Mobile Navigation Bar ===== */
+/* ========================================= */
+.bottom-nav {
+    display: none; /* Hidden by default on larger screens */
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    display: flex;
+    justify-content: space-around;
+    padding: 8px 0;
+    box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
+    z-index: 1000;
+}
+
+.bottom-nav .nav-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: #888;
+    font-size: 12px;
+    position: relative;
+    flex-grow: 1;
+}
+
+.bottom-nav .nav-item i {
+    font-size: 22px;
+    margin-bottom: 4px;
+}
+
+.bottom-nav .nav-item.active {
+    color: #f57224; /* Daraz-style orange */
+}
+
+.bottom-nav .nav-item .notification-badge {
+    position: absolute;
+    top: -2px;
+    right: 20px; 
+    background-color: #f44336;
+    color: white;
+    border-radius: 50%;
+    width: 18px;
+    height: 18px;
+    font-size: 10px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid white;
+}
+
+@media (max-width: 768px) {
+    body {
+        padding-bottom: 70px; /* Adds space at the bottom so content isn't hidden */
+    }
+    .bottom-nav {
+        display: flex; /* Makes the bar visible on mobile */
+    }
+}
